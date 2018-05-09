@@ -1,0 +1,10 @@
+cff-version: 1.0.3
+message: If you use this software, please cite it as below.
+authors:
+  - family-names: Allard
+    given-names: Tania
+    orcid: https://orcid.org/0000-0003-4925-7248
+title: My reproducibel python workflow
+version: 0.1
+doi: 10.5281/zenodo.1241049
+date-released: 2018-05-09
