@@ -52,7 +52,14 @@ def plot_distribution(wine):
 
     fname = f'figures/fig01_distribution-wine-scores.png'
 
-    fig.savefig(fname, bbox_inches = 'tight')
+    try:
+        fig.savefig(fname, bbox_inches = 'tight')
+
+    except OSError as exc:
+        # figures directory does not exist; make it anyway
+        print('Creating figures directory')
+        os.makedirs('figures')
+        fig.savefig(fname, bbox_inches = 'tight')
     return (fname)
 
 
@@ -66,7 +73,14 @@ def plot_scatter(wine):
     ax.set_xlabel('Points')
 
     fname = f'figures/fig02_scatter-points-vs-price.png'
-    fig.savefig(fname, bbox_inches = 'tight')
+    try:
+        fig.savefig(fname, bbox_inches = 'tight')
+
+    except OSError as exc:
+        # figures directory does not exist; make it anyway
+        print('Creating figures directory')
+        os.makedirs('figures')
+        fig.savefig(fname, bbox_inches = 'tight')
     return (fname)
 
 
