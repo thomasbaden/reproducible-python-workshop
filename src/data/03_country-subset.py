@@ -12,6 +12,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+def get_mean_price(filename):
+    """ function to get the mean price of the wines
+    rounded to 4 decimals"""
+    wine = pd.read_csv(filename)
+    mean_price = wine['price'].mean()
+    return round(mean_price, 4)  # note the rounding here
+
 def get_country(filename, country):
     """
     Get a subset of the data or a given country
